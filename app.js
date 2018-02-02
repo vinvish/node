@@ -86,4 +86,4 @@ socket.on('mobilehandler', function(data){
 
 });
 
-console.log('Your presentation is running on http://0.0.0.0:' + port);
+console.log('Your presentation is running on http://http://13.126.117.107:' + port);
