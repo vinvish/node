@@ -1,6 +1,6 @@
 var http = require('http');
-http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Hello World\n');
-}).listen(8000, '13.126.182.198');
-console.log('Server running at http://13.126.182.198:8000/');
+app.set('port', process.env.PORT || 8000);
+app.set('host', process.env.HOST || '13.126.182.198');
+http.createServer(app).listen(app.get('port'), app.get('host'), function(){
+  console.log("Express server listening on port " + app.get('port'));
+});
